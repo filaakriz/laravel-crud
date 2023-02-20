@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Laravel CRUD</title>
+    <title>Laravel</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
     <style type="text/css">
         @import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);
-        
   
         body{
             margin: 0;
@@ -50,7 +49,7 @@
     
 <nav class="navbar navbar-expand-lg navbar-light navbar-laravel">
     <div class="container">
-        <a> Laravel</a>
+        <a class="navbar-brand" href="#">&nbsp;Laravel</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -59,10 +58,13 @@
             <ul class="navbar-nav ml-auto">
                 @guest
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('login-user') }}"><strong>Login</strong></a>
+                        <a class="nav-link" href="{{ route('Home') }}"><strong>Home</strong></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('register-user') }}"><strong>Register</strong></a>
+                        <a class="nav-link" href="{{ route('login') }}"><strong>Login</strong></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('registration') }}"><strong>Register</strong></a>
                     </li>
                 @else
                     <li class="nav-item">

@@ -79,10 +79,11 @@ class CustomAuthController extends Controller
     }
 
     public function logout() {
-        Session::flush();
-        Auth::logout();
-  
-        return Redirect('login');
+        return view("dashboard");
+    }
+
+    public function Home(){
+        return view("dashboard");
     }
 
 }

@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\CustomAuthController;
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,12 +17,16 @@ use App\Http\Controllers\CustomAuthController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('dashboard');
 });
 
 Route::resource('products', ProductController::class);
-Route::get('/login',[CustomAuthController::class,'login']);
-Route::get('/registration',[CustomAuthController::class,'registration']);
+//Route::resource('auth', CustomAuthController::class);
+Route::get('/login',[CustomAuthController::class,'login']) -> name('login');
+Route::get('/Home',[CustomAuthController::class,'Home']) -> name('Home');
+Route::get('/logout',[CustomAuthController::class,'logout']) -> name('logout');
+Route::get('/registration',[CustomAuthController::class,'registration']) -> name('registration');
 Route::post('/register-user',[CustomAuthController::class,'registerUser']) -> name('register-user');
-//Route::post('/login-user',[ProductController::class,'loginUser']) -> name('login-user');
+Route::post('/login-user',[CustomAuthController::class,'loginUser']) -> name('login-user');
+
 

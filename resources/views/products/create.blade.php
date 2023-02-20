@@ -1,4 +1,4 @@
-@extends('layoutAll')
+@extends('logout')
 
 @section('content')
 
